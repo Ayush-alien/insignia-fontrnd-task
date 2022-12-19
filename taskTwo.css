@@ -1,0 +1,142 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+.outer-div{
+    display:grid;
+    grid-template-columns:40% 58%;
+    column-gap:2%;
+}
+.first-div{
+    padding:2rem;
+}
+.myProgress {
+    width:100%;
+    height:8px;
+    background-color: grey;
+    margin:1rem 0rem;
+    box-sizing: border-box;
+  }
+  
+  .myBar{
+    height:8px;
+    background-color:#182747;
+  }
+ .progress-info{
+    display: flex;
+    justify-content: space-between;
+ } 
+ .progress-name{
+    font-size:1.2rem;
+    color:#182747;
+ }
+ .progress-persent{
+    color:red;
+    font-size:1.2rem;
+ }
+ .first-div p{
+    font-size:1.5rem;
+    color:#182747;
+    margin:2rem 0rem;
+ }
+ .first-div h1{
+    margin:0.5rem 0rem;
+    font-size:2.5rem;
+    color:#182747;
+ }
+ .first-div h2{
+    margin:0.5rem 0rem;
+    font-size:2rem;
+    color:#182747;
+ }
+ .second-div{
+    padding:1rem;
+    display:grid;
+    grid-template-columns:49% 49%;
+    column-gap:1%;
+    row-gap:1%;
+}
+
+
+.flip-box {
+    background-color: transparent;
+    width:22rem;
+    height:25rem;   
+    perspective: 1000px;
+    margin:1rem auto;
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    border-radius:1rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #182747;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-box-front {
+    background-color:white;
+    color:#182747;
+    padding:1rem;
+  }
+  .flip-box-front h2{
+    font-size:2rem;
+    margin:1rem 0rem;
+  }
+  .flip-box-front p{
+    font-size:1.5rem;
+  }
+  
+  .flip-box-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  .inetrnet-img-div{
+    height:100px;
+    width:100px;
+    margin:1rem auto;
+  }
+  .inetrnet-img-div img{
+    height:100%;
+    width:100%;
+  }
+
+  @media only screen and (max-width:1350px){
+    .outer-div{
+        display:grid;
+        grid-template-columns:100%;
+        row-gap:2%;
+    }
+  }
+  @media only screen and (max-width:800px){
+    .second-div{
+        grid-template-columns:100%;
+        row-gap:1%;
+    }
+  }
+  @media only screen and (max-width:400px){
+    .flip-box {
+        background-color: transparent;
+        width:95%;
+        height:25rem;   
+        perspective:1000px;
+        margin:1rem auto;
+      }
+  }
